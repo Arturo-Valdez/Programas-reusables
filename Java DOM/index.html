@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM atributos y propiedades</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            background: #26cfcf;
+            transition: all 0.5s;
+        }
+        .grande{
+            width: 500px;
+            height: 500px;
+            background: #cf26c1;
+        }
+        button{
+            background-color: #cf26c1;
+            color: white;
+            padding: 10px 25px;/*Dar mas amplitun 10px de alto y bajo y 20 px de los lados*/
+            border-radius: 10px;/*Eliminar los bordes y hacerlo circular con 50px*/
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 900;
+            border: none;
+        }
+        button:hover{
+            background-color: #26cfcf;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <button onclick="accion();">Cambio</button>
+    <br>
+    <div id="box" class="container"></div>
+    <script>function accion() {
+        var box = document.getElementById("box");
+        if(box.className=="container"){
+            box.className = "container grande";
+        }
+        else{
+            box.className="container";
+        }
+        
+    }
+    </script>
+</body>
+</html>

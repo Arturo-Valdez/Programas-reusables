@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 01</title>
+    <link rel="stylesheet" href="alertas.js">
+    <link rel="stylesheet" href="estilo.css">
+    <script type="text/javascript">
+    function Confirmm() {
+    //Ingresamos un mensaje a mostrar
+    var mensaje = confirm("¿Te gusta Programacion web?");
+    //Detectamos si el usuario acepto el mensaje
+    if (mensaje) {
+    alert("¡Gracias por aceptar!");
+    }
+    //Detectamos si el usuario denegó el mensaje
+    else {
+    alert("¡Haz denegado el mensaje!");
+    }
+    }
+    function alerta() 
+    {
+    var mensaje;
+    var opcion = prompt("Introduzca su nombre:", mensaje);
+ 
+         if (opcion == null || opcion == "") {
+          mensaje = "Has cancelado o introducido el nombre vacío";
+          } else {
+              mensaje = "Hola " + opcion;
+              }
+                document.getElementById("ejemplo").innerHTML = mensaje;
+    }
+
+    function Promptt() {
+    //Ingresamos un mensaje a mostrar
+        var mascota = prompt("¿Cuál es tu mascota favorita?", "");
+        //Detectamos si el usuario ingreso un valor
+        if (mascota != null){
+            alert("Tu mascota favorita es " + mascota);
+        }
+        //Detectamos si el usuario NO ingreso un valor
+        else {
+            alert("No has ingresado una mascota");
+        }
+    }
+    </script>
+
+</head>
+<body>
+    <h1>Uso de alert, prompt, confirm</h1>
+    <input type="button" onclick="alerta()" value="Alerta" />
+    <input type="button" onclick="Confirmm()" value="Confirmación" />
+    <input type="button" onclick="Promptt()" value="Personalizado" />
+</body>
+</html>

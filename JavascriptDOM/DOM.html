@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            background: #fff;
+        }
+        .fondo{
+            background: aqua;
+        }
+        .estilo{
+            padding: 10px;
+        }
+        button{
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body id="body" class="container">
+
+       <img src="bannerJs.jpg" id="foto" alt="" width="100%">
+
+        <h1>Manejo de DOM con javascript</h1> <br>
+        <h2>Titulo principal</h2><br>
+        <h3>subtitulo</h3><br>
+
+
+        <button onclick="accion1();">Cambiar banner</button>
+        <button onclick="accion2();">Poner color de fondo</button>
+
+
+    <script>
+        function accion2(){
+            var cambio = document.getElementById("body");
+           if( body.className=="container"){
+               body.className="container fondo";
+           }
+           else{
+               body.className = "container"
+           }
+        }
+        var fotoamostrar ="img1";
+        function accion1(){
+            var imagen = document.getElementById("foto");
+           if( fotoamostrar=="img1"){
+               foto.src = "node-js.jpg";
+               fotoamostrar = "node";
+           }
+           else{
+               foto.src = "bannerJs.jpg";
+               fotoamostrar = "img1";
+           }
+        }
+
+    </script>
+</body>
+</html>
